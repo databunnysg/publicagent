@@ -22,7 +22,7 @@ while(TRUE)
       payloadcontent<-URLencode(base64_enc(serialize(result,NULL)))
       if(DEV) getForm("http://127.0.0.1:4738/upload",table="computer",mergekey="macaddress",payload=payloadcontent)
       if(PROD) getForm("http://192.168.1.150:1500/upload",table="computer",mergekey="macaddress",payload=payloadcontent)
-      Sys.sleep(3000)
+      Sys.sleep(3)
     }
   )
 }
